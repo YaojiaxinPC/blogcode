@@ -271,6 +271,13 @@ gulp.task('default', ['clean'],()=>{gulp.start('build');});
 
 [npm 模块安装机制简介](http://www.ruanyifeng.com/blog/2016/01/npm-install.html) 
 
+
+　　另外，在github下载别人的博客代码后，可以通过cmd cd到目录下，直接npm install就行，会默认自己找package.json来安装。注意看一下里面的结构，联网下载的是有前缀^，本地文件的是相对路径。
+
+　　package-lock.json影响不大，可以删除。当安装package.json时，会重新生成。
+
+![Result pic 12](/contentimg/8/12.png "package.json")
+
 ## 四.总结
 
 　　划重点，其实如果你部署在codingpage上，本篇文章就不用看了。因为都是秒开的。
