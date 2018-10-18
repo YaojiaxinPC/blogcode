@@ -9,7 +9,10 @@ tags:
   - 个人博客  
 ---
 	
-　　本文是记录如何修改配置Next，以及修改一些js脚本到目前这种效果的文章。是在前面几篇文章的扩展记录。
+　　本文是记录如何修改配置Next，增加统计功能、评论区、RSS等模块。是在前面几篇文章的扩展记录。
 
 <!-- more -->
 　　
+[Next的使用说明](http://theme-next.iissnan.com/getting-started.html#avatar-setting)
+
+　　开头先贴官方配置说明。
