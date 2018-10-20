@@ -15,7 +15,7 @@ avatar: /contentimg/headpic.jpg
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://yaojx.net
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :category/:title/ ##:year/:month/:day/
 permalink_defaults:
 
 # Directory
@@ -30,6 +30,9 @@ skip_render:
  - contentimg/11/click.html
  - 404/404.html
  - README.md
+ - contentimg/18/*
+ - baidu_verify_JUfi5MBhor.html
+ - google33931402362bf12b.html
  
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -82,8 +85,9 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:YaojiaxinPC/YaojiaxinPC.github.io.git
-  branch: master
+  repo:
+      github: git@github.com:YaojiaxinPC/YaojiaxinPC.github.io.git,master
+      coding: git@git.coding.net:yaojiaxinpc/yaojiaxinpc.git,master
   
 # Extensions
 plugins:
@@ -97,3 +101,14 @@ feed:
 #sitemap
 sitemap:
   path: sitemap.xml
+
+baidusitemap:
+  path: baidusitemap.xml
+
+  
+#表示站内搜索
+search:  
+    path: search.xml
+    field: post
+    format: html
+    limit: 10000

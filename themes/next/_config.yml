@@ -51,7 +51,7 @@ footer:
   icon: user
 
   # If not defined, will be used `author` from Hexo main config.
-  copyright:
+  copyright: 姚佳鑫
   # -------------------------------------------------------------
   # Hexo link (Powered by Hexo).
   powered: true
@@ -63,7 +63,7 @@ footer:
     version: true
   # -------------------------------------------------------------
   # Any custom text can be defined here.
-  #custom_text: Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
+  #custom_text: Hosted by <a href="https://pages.coding.me" style="font-weight:bold">Coding Pages</a>
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -79,7 +79,7 @@ seo: false
 
 # If true, will add site-subtitle to index page, added in main hexo config.
 # subtitle: Subtitle
-index_with_subtitle: false
+index_with_subtitle: true
 
 
 # ---------------------------------------------------------------
@@ -194,10 +194,10 @@ sidebar:
   offset: 12
 
   # Back to top in sidebar (only for Pisces | Gemini).
-  b2t: false
+  b2t: true
 
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
   # Enable sidebar on narrow view (only for Muse | Mist).
   onmobile: false
@@ -239,10 +239,10 @@ post_wordcount:
   separated_meta: true
 
 # Wechat Subscriber
-#wechat_subscriber:
-  #enabled: true
-  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
-  #description: ex. subscribe to my blog by scanning my public wechat account
+wechat_subscriber:
+  enabled: true
+  qcode: /images/wechataddfriend.png
+  description: 如果您对我的文章感兴趣，可以添加我的微信
 
 # Reward
 reward_comment: 感谢您的支持
@@ -252,7 +252,7 @@ alipay: /images/alipay.png
 
 # Declare license on posts
 post_copyright:
-  enable: false
+  enable: true
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
@@ -356,7 +356,7 @@ han: false
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: 59fb881ccdff1a2b18e2b7839f452118
 
 # Duoshuo ShortName
 #duoshuo_shortname:
@@ -423,7 +423,7 @@ gitment:
 # Warning: Baidu Share does not support https.
 #baidushare:
 ##  type: button
-
+  
 # Share
 # This plugin is more useful in China, make sure you known how to use it.
 # And you can find the use guide at official webiste: http://www.jiathis.com/.
@@ -575,7 +575,7 @@ busuanzi_count:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
 # Google Calendar
 # Share your recent schedule to others via calendar page
@@ -607,13 +607,13 @@ algolia_search:
 # Local search
 # Dependencies: https://github.com/flashlab/hexo-generator-search
 local_search:
-  enable: false
+  enable: true
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
-  trigger: auto
+  trigger: auto  # auto/manual，auto 自动搜索、manual：按回车[enter ]键手动搜索
   # show top n results per article, show all results by setting to -1
   top_n_per_article: 1
-
+  unescape: true
 
 # ---------------------------------------------------------------
 # Tags Settings
@@ -678,7 +678,7 @@ motion:
 fancybox: true
 
 # Progress bar in the top during page loading.
-pace: false
+pace: true
 # Themes list:
 #pace-theme-big-counter
 #pace-theme-bounce
@@ -695,7 +695,7 @@ pace: false
 #pace-theme-minimal
 # For example
 # pace_theme: pace-theme-center-simple
-pace_theme: pace-theme-minimal
+pace_theme: pace-theme-center-atom
 
 # Canvas-nest
 canvas_nest: true

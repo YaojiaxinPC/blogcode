@@ -136,13 +136,28 @@ npm install <name> [-g] [--save-dev]
 ![Result pic 9](/contentimg/8/9.png "package.json")
 
 
+
+``` bash
+npm install gulp --save-dev
+npm install gulp-htmlclean --save-dev
+npm install gulp-htmlmin --save-dev
+npm install gulp-imagemin --save-dev
+npm install gulp-minify-css --save-dev
+npm install gulp-uglify --save-dev
+//文件处理
+npm install del --save
+npm install mv --save
+//这个网络情况不是很好，所以最好通过设置配置文件的skip_render来避免处理README.md
+npm install copy --save
+```
+
 ### 3.2 编写gulp脚本
 
 　　[gulp脚本](https://github.com/YaojiaxinPC/blogcode/blob/master/gulpfile.js) 
 
 　　可以使用我github上的这个脚本。里面做的事情就是压缩html、css、js、图片等，在我电脑上，无法进行覆盖操作，所以我就把生成的压缩文件保存到缓存文件夹，然后用del/copy/mv等操作来处理。
 
-　　注意hexo编译的时候，会把后缀为“md”的文件都转成html，所以README.md也会变成README.html。这样，就不能把它放在source里面，只能放外面，在gulp后再复制进去public中。
+　　注意hexo编译的时候，会把后缀为“md”的文件都转成html，所以README.md也会变成README.html。这样，就不能把它放在source里面，只能放外面，在gulp后再复制进去public中。(其实这里可以通过设置主配置文件的skip_render来避免编译)
 
 ``` js
 var gulp = require('gulp');

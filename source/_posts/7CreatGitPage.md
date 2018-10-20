@@ -152,6 +152,10 @@ hexo new pagename
 
 　　这里可以弄SSH密钥后，设置成gitbash来直接“hexo d”就上传public文件目录。也可以手动拖文件到GitHub DeskTop里上传。而拉到网页上的话，github是支持的，但是coding不支持多文件。
 
+　　注意要先安装插件：
+
+>  npm install hexo-deployer-git --save
+
 　　下面记录SSH key方式，因为这种方式可以直接gitbash界面操作，可以在执行完“hexo g”后直接“hexo d -m 'comment message'”就部署上去，很方便。
 
 　　登陆github个人主页，个人头像下拉-->Settings-->SSH and GPG keys-->New SSH key

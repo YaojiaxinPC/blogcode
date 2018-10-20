@@ -61,6 +61,11 @@
         {% endif %}
 
         <div class="post-meta">
+		  {% if post.top %}
+            <i class="fa fa-thumb-tack"></i>
+            <font color=#222>置顶</font>
+            <span class="post-meta-divider">|</span>
+          {% endif %}
           <span class="post-time">
             {% if theme.post_meta.created_at %}
               <span class="post-meta-item-icon">
@@ -333,7 +338,11 @@
     {#####################}
     {### END POST BODY ###}
     {#####################}
-
+	
+    {% if not is_index %}
+	<div style="height:85px;line-height:85px;text-align:center;color:#ccc;font-size:20px"><hr size="7" color="coral" style="vertical-align:middle;float:left" width="40%"> The End <hr size="7" color="coral" style="vertical-align:middle;float:right" width="40%"><br style="clear:both"/></div>
+	{% endif %}
+	
     {% if theme.wechat_subscriber.enabled and not is_index %}
       <div>
         {% include 'wechat-subscriber.swig' %}
@@ -356,7 +365,7 @@
       {% if post.tags and post.tags.length and not is_index %}
         <div class="post-tags">
           {% for tag in post.tags %}
-            <a href="{{ url_for(tag.path) }}" rel="tag"># {{ tag.name }}</a>
+            <a href="{{ url_for(tag.path) }}" rel="tag"><i class="fa fa-tag"></i> {{ tag.name }}</a>
           {% endfor %}
         </div>
       {% endif %}
