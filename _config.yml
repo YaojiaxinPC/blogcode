@@ -13,7 +13,7 @@ timezone: Asia/Shanghai
 avatar: /contentimg/headpic.jpg
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yaojx.net
+url: https://YaojiaxinPC.github.io
 root: /
 permalink: :category/:title/ ##:year/:month/:day/
 permalink_defaults:
@@ -103,6 +103,7 @@ sitemap:
   path: sitemap.xml
 
 baidusitemap:
+  url: http://yaojx.net
   path: baidusitemap.xml
 
   

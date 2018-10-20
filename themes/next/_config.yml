@@ -128,7 +128,7 @@ scheme: Gemini
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
   GitHub: https://github.com/YaojiaxinPC || github
-  WeChat: /images/wechataddfriend.png
+  WeChat: /images/wechataddfriend.png || wechat
   #E-Mail: yaojiaxinn@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -142,7 +142,7 @@ social:
 social_icons:
   enable: true
   GitHub: github
-  WeChat: weibo
+  WeChat: wechat
   icons_only: false
   transition: false
 
