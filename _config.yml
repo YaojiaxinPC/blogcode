@@ -15,7 +15,7 @@ avatar: /contentimg/headpic.jpg
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://YaojiaxinPC.github.io
 root: /
-permalink: :category/:title/ ##:year/:month/:day/
+permalink: :title/ ##:year/:month/:day/
 permalink_defaults:
 
 # Directory
@@ -115,3 +115,8 @@ search:
     field: post
     format: html
     limit: 10000
+	
+nofollow:
+    enable: true
+    exclude:
+        - yaojx.net

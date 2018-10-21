@@ -209,6 +209,12 @@ baidusitemap:
 
 ![Result pic 1](/contentimg/9/46.png "提交百度收录")
 
+
+　　建议开启百度自动推送，就sitemap左边那个。代码已经集成在Next了，只要开启主题配置文件的属性“baidu_push”：
+
+![Result pic 1](/contentimg/9/50.png "百度自动推送")
+
+
 ## Google收录
 
 >  npm install hexo-generator-sitemap --save -dev
@@ -227,7 +233,8 @@ sitemap:
   path: sitemap.xml
 ```
 
-　　同样要去提交收录。
+　　同样要去提交收录。但是超级快，一下就能在谷歌搜索到了。
+
 
 ## 其他第三方服务
 
@@ -294,6 +301,7 @@ sitemap:
 #### 右上角
 
 　　到[GitHub Corners](http://tholman.com/github-corners/)  选择喜欢的样式，复制代码。然后定位到next/layout/_layout.swig，搜索headband。将代码贴在下面：
+
 
 ![Result pic 1](/contentimg/9/39.png "右边实例")
 
@@ -398,8 +406,71 @@ npm install hexo-generator-index-pin-top --save -dev
 
 ![Result pic 1](/contentimg/9/48.png "添加置顶图标")
 
-![Result pic 1](/contentimg/9/49.png "置顶效果")
+![Result pic 1](/contentimg/9/49.png "置顶效果")　　
 
+### [添加coding部分的一键复制功能](https://yfzhou.coding.me/2018/08/27/Hexo-Next%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BB%A3%E7%A0%81%E5%9D%97%E5%A4%8D%E5%88%B6%E5%8A%9F%E8%83%BD%EF%BC%89/) 
+
+　　本博客没启用该功能，具体请访问该链接：[添加coding部分的一键复制功能](https://yfzhou.coding.me/2018/08/27/Hexo-Next%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BB%A3%E7%A0%81%E5%9D%97%E5%A4%8D%E5%88%B6%E5%8A%9F%E8%83%BD%EF%BC%89/)  
+
+　　由于有中文，该链接通过中文转码处理，如果失效，请通过域名查找。
+
+### 添加Robot和nofollow
+
+　　新建robots.txt文件在source根目录下：
+
+```  cmd
+#hexo robots.txt
+User-agent: *
+
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/
+Allow: /about/
+
+Disallow: /404/
+Disallow: /contentimg/
+Disallow: /css/
+Disallow: /images/
+Disallow: /js/
+Disallow: /lib/
+
+
+
+Sitemap: http://yaojx.net/search.xml
+Sitemap: http://yaojx.net/sitemap.xml
+Sitemap: http://yaojx.net/baidusitemap.xml
+```
+
+　　当没这个文件时，默认全部内容可以爬，这个文件就是告诉那些可以爬，那些不行。
+
+>  npm install hexo-autonofollow --save
+
+　　当文章中有链接时，爬虫会顺着链接爬出去。所以得加这个nofollow。
+
+　　安装完后，到主配置文件最底下添加：
+
+``` cmd
+nofollow:
+    enable: true
+    exclude:
+        - yaojx.net
+```
+
+　　然后就是去百度站长提交robot文件了。
+
+### qq点击后直接开打联系我的窗口
+
+　　该功能使用的是腾讯的开放接口：
+
+![Result pic 1](/contentimg/9/51.png "next配置文件设置")　　
+
+
+``` html
+http://wpa.qq.com/msgrd?v=3&uin=659771655&site=qq&menu=yes
+```
+
+　　uin改成自己的qq就行了。
 
 
 这里有几篇文章是讲怎么修改整个主题的，重点推荐：
