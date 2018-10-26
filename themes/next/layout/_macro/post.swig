@@ -340,7 +340,7 @@
     {#####################}
 	
     {% if not is_index %}
-	<div style="height:85px;line-height:85px;text-align:center;color:#ccc;font-size:20px"><hr size="7" color="coral" style="vertical-align:middle;float:left" width="40%"> The End <hr size="7" color="coral" style="vertical-align:middle;float:right" width="40%"><br style="clear:both"/></div>
+	<div style="height:85px;line-height:85px;text-align:center;color:#ccc;"><hr size="7" color="coral" style="vertical-align:middle;float:left" width="40%"> The End <hr size="7" color="coral" style="vertical-align:middle;float:right" width="40%"><br style="clear:both"/></div>
 	{% endif %}
 	
     {% if theme.wechat_subscriber.enabled and not is_index %}

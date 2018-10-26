@@ -250,7 +250,7 @@ sitemap:
 
 ### 文章末尾添加“---end---”
 
-　　打开themes\next\layout\_macro\post.swig，找到“wechat_subscriber”的地方，这个就是文章结尾时，“请加我好友”的图标所在的地方。复制如下代码：
+　　打开themes\next\layout\ _macro\post.swig，找到“wechat_subscriber”的地方，这个就是文章结尾时，“请加我好友”的图标所在的地方。复制如下代码：
 
 ``` html
     {% if not is_index %}
@@ -264,7 +264,7 @@ sitemap:
 
 ``` html
     {% if not is_index %}
-	<div style="height:85px;line-height:85px;text-align:center;color:#ccc;font-size:20px"><hr size="7" color="coral" style="vertical-align:middle;float:left" width="40%"> The End <hr size="7" color="coral" style="vertical-align:middle;float:right" width="40%"><br style="clear:both"/></div>
+	<div style="height:85px;line-height:85px;text-align:center;color:#ccc;"><hr size="7" color="coral" style="vertical-align:middle;float:left" width="40%"> The End <hr size="7" color="coral" style="vertical-align:middle;float:right" width="40%"><br style="clear:both"/></div>
 	{% endif %}
 ```
 
@@ -478,19 +478,4 @@ http://wpa.qq.com/msgrd?v=3&uin=659771655&site=qq&menu=yes
 [Hexo搭建GitHub博客—打造炫酷的NexT主题--高级(四)](https://segmentfault.com/a/1190000016527304) 
 [Hexo+Next个人博客主题优化](https://www.colabug.com/1840493.html) 
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
