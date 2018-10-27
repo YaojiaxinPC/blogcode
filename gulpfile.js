@@ -56,7 +56,7 @@ gulp.task('minify-css', function() {
 });
 // 压缩js
 gulp.task('minify-js', function() {
-    return gulp.src('./public/**/*.js')
+    return gulp.src(['./public/**/*.js','!./public/unitydemo/**/*'])
         .pipe(uglify())
         .pipe(gulp.dest('./public1'));
 });
@@ -73,7 +73,7 @@ gulp.task('minify-images', function() {
 });
 // 压缩文章图片
 gulp.task('minify-contentimg', function() {
-    return gulp.src('./public/contentimg/**/*.*')
+    return gulp.src(['./public/contentimg/**/*.jpg','./public/contentimg/**/*.png'])
         .pipe(imagemin(
         [imagemin.gifsicle({'optimizationLevel': 3}), 
         imagemin.jpegtran({'progressive': true}), 
