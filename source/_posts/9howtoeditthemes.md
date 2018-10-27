@@ -472,6 +472,22 @@ http://wpa.qq.com/msgrd?v=3&uin=659771655&site=qq&menu=yes
 
 　　uin改成自己的qq就行了。
 
+### 压缩gif
+
+　　通常录屏文件要好几M，会导致网页加载严重缓慢，这里就需要进行压缩了，但是不建议进行脚本压缩，建议一张一张根据实际情况压缩。
+
+　　这里需要安装gifsicle。国内资料比较少，这里有个[说明文档](http://www.manpagez.com/man/1/gifsicle/)  。
+
+>  npm install gifsicle --global
+
+　　目前我会用的功能比较少，主要使用了压缩色调：
+
+>  gifsicle -o3 1.gif -o 4.gif --colors 32
+
+>  gifsicle -o3 需要压缩的文件  -o  输出的文件名 --colors 数字 
+
+　　通常情况下，录屏产生的gif是256色调的大体积文件，可以通过压缩成128、64、32、16等等色调，达到体积变小的目的。具体情况可以压缩试试看效果。这个操作是通过丢弃部分颜色值，达到压缩的效果的，所以色调越低，压缩越多，当然，照片也就失真越明显。
+
 
 这里有几篇文章是讲怎么修改整个主题的，重点推荐：
 [基于Hexo搭建个人博客——进阶篇(从入门到入土)](http://yangbingdong.com/2017/build-blog-hexo-advanced/) 

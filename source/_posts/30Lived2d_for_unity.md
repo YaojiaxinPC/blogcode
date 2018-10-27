@@ -23,18 +23,18 @@ tags:
 
 　　这里放一下两个下载链接：
 
-1. [SDK下载指导文档](http://www.live2d.com/usermanual/cubism2_cn/lets-do-it/my-first-lapp/02.html) 
+1. [2.1SDK下载指导文档](http://www.live2d.com/usermanual/cubism2_cn/lets-do-it/my-first-lapp/02.html) 
   
-1. [unitypackage包下载指导文档](http://docs.live2d.com/cubism-sdk-tutorials/getting-started/) 
+1. [3.0unitypackage包下载指导文档](http://docs.live2d.com/cubism-sdk-tutorials/getting-started/) 
 
-　　请先根据上面链接的教程，对应去下载SDK包。当然也可以去github下载。在GitHubPage中，也刚好有人开源做这个插件的挂饰效果，已经集成在hexo中了。在我置顶博文中，底部的几个链接都有提到这个使用教程。本文只简单根据Unity中使用的情况来介绍该插件。
+　　请先根据上面链接的教程，对应去下载SDK包。当然也可以去github下载最新包。在GitHubPage中，也刚好有人开源做这个插件的挂饰效果，已经集成在hexo中了。在我置顶博文中，底部的几个链接都有提到这个使用教程。本文只简单根据Unity中使用的情况来介绍该插件。
 
 　　教程网页很人性化，是有中文和英文版本的，图文并茂，虽然部分链接点开需要VPN。这里就不讲复杂的怎么做模型，怎么应用等等。只在下载的两个包的基础上进行简单分析。
 
 ![Result pic 1](/contentimg/30/2.png "下载的两个包")
 
 
-　　两个包是互不相关的，如果不会VPN，unitypackage包不要也行，它只是多了部分功能的集成而已（[json转AnimationClip功能](http://docs.live2d.com/cubism-sdk-tutorials/animation/)  等等其他好多功能的集成）。简单的接触，从官网主页下载的2.1sdk包就能正常运行了。
+　　如果不会VPN，unitypackage包不要也行，它只是多了部分功能的集成而已（[json转AnimationClip功能](http://docs.live2d.com/cubism-sdk-tutorials/animation/)  等等其他好多功能的集成）。简单的接触，从官网主页下载的2.1sdk包就能正常运行了。
 
 　　在sample里面是几个使用例子。每个都能独立正常运行的。
 
@@ -52,19 +52,26 @@ tags:
 ![Result pic 1](/contentimg/30/4.png "Create Live2D Canvas")
 
 
-　　这里是建了一个透明的背景材质，然后通过脚本来Load模型，并贴上去。Load函数在示例程序里面也有了，LAppModelProxy类。就是传model.json的地址给它，然后它找到这个文件后，解析，根据文件里面的记录，去找对应的其他信息。
+　　这里是建了一个透明的背景材质，然后通过脚本来Load模型，并贴上去。Load函数在示例程序里面也有了，LAppModelProxy类。就是传model.json的地址给它，然后它找到这个文件后，解析，根据文件里面的记录，去找对应的其他信息：找模型、表情动作参数、声音等等。
 
 ![Result pic 1](/contentimg/30/5.png "总信息记录")
 
 
 　　示例程序这里的动画效果比较少，实际上，在unitypackage包里面就可以看到，是和骨骼动画一样，每一个关节都可以运动的！
 
-　　expressins文件夹的4个动画效果，只是其中抽出来的示例动画，实际上只要我们想到，都可以编出来，然后加进去。
+　　这里是记录播放该动画时，运行的时间fade，以及变动的键值。
 
 ![Result pic 1](/contentimg/30/6.png "动画信息内容")
-　　
 
-　　这里是记录播放该动画时，运行的时间fade，以及变动的键值。
+
+　　expressins文件夹的4个动画效果，只是其中抽出来的示例动画，实际上只要我们想到，都可以编出来，然后加进去。2.1版本的还是读json，但是官方提倡使用动画机，在3.0就建议直接使用动画机来完成动画的编制了。原理都是找到对应的key，传递新value。就是多了一层解析封装，让动画机能直接调用并修改key的value。
+
+　　这里可以自己封装，在motions里面可以提取key，然后包装，调用L2DMotionManager的startMotionPrio函数。相当于3.0的OnRenderObject自动调用TaskableModel.TryWriteParametersAndParts(Parameters, Parts);
+
+
+![Result pic 1](/contentimg/30/17.png "2.1修改value函数")
+
+![Result pic 1](/contentimg/30/16.png "3.0修改value函数")
 
 ![Result pic 1](/contentimg/30/2.gif "键值修改效果")
 
