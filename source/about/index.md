@@ -17,6 +17,10 @@ date: 2018-10-14 18:24:21
 　　手机用户亦可访问：<a id="qqlink" href="mqqwpa://im/chat?chat_type=wpa&uin=659771655&version=1&src_type=web&web_src=oicqzone.com"><i class="fa fa-fw fa-qq"></i><span> Q-me:659771655 </span></a>
 
 
+　　个人简历：<a id="download" href="/contentimg/Unity姚佳鑫_13580519427.pdf" download="Unity姚佳鑫_13580519427.pdf"><i class="fa fa-download"></i><span> 下载简历 </span>
+</a>
+
+<p><div style="width:100%; height:950px;border:none;text-align:center"><iframe allowtransparency="yes" frameborder="0" width="100%" height="900" src="/unitydemo/pdfjs-web/web/viewer.html?file=/contentimg/Unity姚佳鑫_13580519427.pdf"/></div></p>
 
 
 
