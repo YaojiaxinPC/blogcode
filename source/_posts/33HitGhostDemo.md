@@ -242,3 +242,6 @@ tags:
 工程项目源码： 
 
 [HitGhost](https://github.com/YaojiaxinPC/hexoblog/tree/master/UnityDemo/HitGHOST) 
+
+　　代码还有优化空间，应该抽一个局管理类出来。同时UImanager和gamemanager交叉比较多，可以进行拆分。当然还可以加入EasyTouch、计时、投币等等延伸。
+
