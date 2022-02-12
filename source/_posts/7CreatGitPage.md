@@ -154,7 +154,7 @@ hexo new pagename
 
 　　注意要先安装插件：
 
->  npm install hexo-deployer-git --save
+>  npm install hexo-deployer-git -save
 
 　　下面记录SSH key方式，因为这种方式可以直接gitbash界面操作，可以在执行完“hexo g”后直接“hexo d -m 'comment message'”就部署上去，很方便。
 
